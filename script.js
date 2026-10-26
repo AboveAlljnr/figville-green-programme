@@ -71,8 +71,13 @@
   // ─── HERO VIDEO: fade in when ready ─────────────────────────────────────────
   var vid = document.getElementById('heroVideo');
   if (vid) {
-    vid.addEventListener('canplay', function () { vid.classList.add('ready'); });
-    vid.addEventListener('error', function () { vid.remove(); }, true);
+    function showVideo() { vid.classList.add('ready'); }
+    vid.addEventListener('canplay', showVideo);
+    vid.addEventListener('loadeddata', showVideo);
+    if (vid.readyState >= 2) showVideo();
+    // Ignore per-<source> errors so the next source can be tried; drop the
+    // element only when every source has failed.
+    vid.addEventListener('error', function (e) { if (e.target === vid) vid.remove(); }, true);
     if (reduce) { vid.removeAttribute('autoplay'); vid.pause(); }
   }
 
