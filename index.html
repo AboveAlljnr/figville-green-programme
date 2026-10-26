@@ -50,9 +50,10 @@
 
     <!-- ═══════════════════════════════════ HERO ═════════════════════════════════════════ -->
     <section class="hero" id="top">
-      <!-- Drop hero.webm / hero.mp4 into assets/. Until then the green gradient shows. -->
-      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
-        <source src="assets/hero.webm" type="video/webm">
+      <!-- Streamed from Pexels (free licence, no attribution required). To self-host, drop hero.webm / hero.mp4 into assets/ and point the sources below at them. Until then the green gradient shows. -->
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="https://videos.pexels.com/video-files/12299062/12299062-hd_1280_720_30fps.mp4" type="video/mp4" media="(min-width: 768px)">
+        <source src="https://videos.pexels.com/video-files/12299062/12299062-sd_960_540_30fps.mp4" type="video/mp4">
         <source src="assets/hero.mp4" type="video/mp4">
       </video>
       <svg class="hero-arc" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
