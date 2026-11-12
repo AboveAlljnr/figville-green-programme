@@ -84,7 +84,12 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 1px 0 rgba(47,93,70,.12);
   backdrop-filter: blur(12px);
 }
-.brand img { width: 84px; background: #fff; padding: 5px 8px; border-radius: 10px; }
+.brand img { width: 84px; display: block; }
+/* The header is transparent over the dark hero, so use the white/inverse logo
+   there and the original dark logo once the header turns white. */
+.brand .brand-logo-light { display: none; }
+.top:not(.scrolled) .brand-logo-dark { display: none; }
+.top:not(.scrolled) .brand-logo-light { display: block; }
 
 /* Desktop nav links wrapper */
 .nav-links {
