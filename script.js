@@ -2,7 +2,7 @@
   'use strict';
 
   // ─── SETTINGS ──────────────────────────────────────────────────────────────
-  var CONTACT_EMAIL = 'info@figville.com';
+  var CONTACT_EMAIL = 'paapasly1@gmail.com';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ─── HERO: sun travels along the arc ────────────────────────────────────────
